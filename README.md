@@ -1,4 +1,4 @@
-This reposintoy is in requiuemtn for the final software project.
+This repository is in requirement for the final software project.
 
 
 This code is designed to create a game called Wandering in the Woods.
