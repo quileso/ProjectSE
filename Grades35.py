@@ -7,7 +7,7 @@ def main():
     grid_size = int(input("Enter the grid size (enter 5 for a 5x5 grid or 3 for a 3x3 grid, etc.): "))
 
     # Ask the user for the desired number of players
-    total_players = int(input("Enter the number of players (2-4): "))
+    total_players = int(input("Enter the number of players you wish to play with. Please only enter number between 2 and 4: "))
     if total_players < 2 or total_players > 4:
         print("Please enter a valid number of players (2-4).")
         return
@@ -34,15 +34,14 @@ def main():
     # Ask the user for the initial positions of the characters
     def character_position(character_name):
         while True:
-            try:
-                row = int(input(f"Enter the starting row position for {character_name} (0 to {grid_size-1}): "))
-                column = int(input(f"Enter the starting column position for {character_name} (0 to {grid_size-1}): "))
+
+                row = int(input(f"Enter the row position for {character_name} (0 to {grid_size-1}): "))
+                column = int(input(f"Enter the column position for {character_name} (0 to {grid_size-1}): "))
                 if 0 <= row < grid_size and 0 <= column < grid_size:
                     return [row, column]
                 else:
-                    print("Invalid input. Please enter values within the grid size.")
-            except ValueError:
-                print("Invalid input. Please enter numeric values.")
+                    print("Invalid user input. Please enter values within the correct grid size.")
+
 
     # Initialize positions, move counters, and groups for each character
     character_positions = []
@@ -176,4 +175,4 @@ def main():
     pygame.quit()
 
 if __name__ == "__main__":
-    main_35()
+    main()
